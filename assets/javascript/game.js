@@ -36,7 +36,7 @@ function gameStarter () {
 
     correctSpaceHoldersDisplay.textContent = correctSpaceHolders.join(" ");
     guessesRemainingDisplay.textContent = "Lives: " + guessesRemaining;
-    winsDisplay.textContent = "Wins: " + wins;
+    // winsDisplay.textContent = "Wins: " + wins;
     // lettersGuessedDisplay.textContent = 
 
     log(wordSelector);
@@ -71,8 +71,23 @@ function guessChecker (letter) {
 }
 
 function newGame () {
-    log("wins" + wins + "guesses left" + guessesRemaining);
+    log(wins + guessesRemaining);
+    if (wordLetters.toString() == correctSpaceHolders.toString()) {
+        wins++;
+        alert("You win!");
+        
+        winsDisplay.textContent = "Wins: " + wins;
+        
+        newGame ();
+    }
+
+    else if (guessesRemaining == 0){
+        alert("You lose!");
+
+        newGame ();
+    }
 }
+
 gameStarter ();
 
 document.onkeyup = function(event) {
