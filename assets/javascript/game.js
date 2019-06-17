@@ -1,6 +1,6 @@
 //Arrays and variables
 var log = console.log;
-var words = ["Hawaii", "Singapore", "Thailand", "Positano"];
+var words = ["hawaii", "singapore", "thailand", "positano"];
 var wordSelector = "";
 var wordLetters = [];
 var spaceHolders = 0;
@@ -18,11 +18,7 @@ var winsDisplay = document.getElementById("wins-text");
 var correctSpaceHoldersDisplay = document.getElementById("correctSpaceHolders-text");
 
 // //This function will run whenever the player presses a key
-// document.onkeyup = function(event) {
 
-//     var playerChoice = event.key;
-
-// }
 
 function gameStarter () {
     wordSelector = words[Math.floor(Math.random() * words.length)];
@@ -50,9 +46,44 @@ function gameStarter () {
 
 }
 
+function guessChecker (letter) {
+    var correctLetter = false;
+
+    for (var i=0; i<spaceHolders; i++) {
+        if (wordSelector[i] == letter) {
+            correctLetter = true;
+        }
+    }
+
+    if (correctLetter) {
+        for (var i=0; i<spaceHolders; i++) {
+            if (wordSelector[i] == letter) {
+                correctSpaceHolders[i] = letter;
+            }
+        }
+    }
+
+    else {
+        incorrectLetters.push[letter];
+        guessesRemaining--;
+    }
+    log(correctSpaceHolders);
+}
+
+function newGame () {
+    log("wins" + wins + "guesses left" + guessesRemaining);
+}
 gameStarter ();
 
+document.onkeyup = function(event) {
 
+    var playerGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    guessChecker(playerGuess);
+    newGame ();
+
+    log(playerGuess);
+
+}
 
 
 
