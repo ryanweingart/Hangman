@@ -13,7 +13,7 @@ var wins = 0;
 // var directionsDisplay = document.getElementById("directions-text");
 // var playerGuessDisplay = document.getElementById("playerGuess-text");
 var guessesRemainingDisplay = document.getElementById("guessesRemaining-text");
-// var lettersGuessedDisplay = document.getElementById("lettersGuessed-text");
+var lettersGuessedDisplay = document.getElementById("lettersGuessed-text");
 var winsDisplay = document.getElementById("wins-text");
 var correctSpaceHoldersDisplay = document.getElementById("correctSpaceHolders-text");
 
@@ -36,8 +36,7 @@ function gameStarter () {
 
     correctSpaceHoldersDisplay.textContent = correctSpaceHolders.join(" ");
     guessesRemainingDisplay.textContent = "Lives: " + guessesRemaining;
-    // winsDisplay.textContent = "Wins: " + wins;
-    // lettersGuessedDisplay.textContent = 
+    winsDisplay.textContent = "Wins: " + wins;
 
     log(wordSelector);
     log(wordLetters);
@@ -71,7 +70,13 @@ function guessChecker (letter) {
 }
 
 function newGame () {
-    log(wins + guessesRemaining);
+
+    guessesRemainingDisplay.textContent = guessesRemaining;
+    correctSpaceHoldersDisplay.textContent = correctSpaceHolders.join(" ");
+    lettersGuessedDisplay.textContent = incorrectLetters.join(" ");
+
+
+
     if (wordLetters.toString() == correctSpaceHolders.toString()) {
         wins++;
         alert("You win!");
