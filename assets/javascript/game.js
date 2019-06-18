@@ -17,7 +17,6 @@ var lettersGuessedDisplay = document.getElementById("lettersGuessed-text");
 var winsDisplay = document.getElementById("wins-text");
 var correctSpaceHoldersDisplay = document.getElementById("correctSpaceHolders-text");
 
-// //This function will run whenever the player presses a key
 
 
 function gameStarter () {
@@ -35,6 +34,7 @@ function gameStarter () {
     }
 
     correctSpaceHoldersDisplay.textContent = correctSpaceHolders.join(" ");
+    lettersGuessedDisplay.textContent = "Incorrect Letters: " + incorrectLetters.join(" ");
     guessesRemainingDisplay.textContent = "Lives: " + guessesRemaining;
     winsDisplay.textContent = "Wins: " + wins;
 
@@ -63,7 +63,7 @@ function guessChecker (letter) {
     }
 
     else {
-        incorrectLetters.push[letter];
+        incorrectLetters.push(letter);
         guessesRemaining--;
     }
     log(correctSpaceHolders);
@@ -71,9 +71,9 @@ function guessChecker (letter) {
 
 function newGame () {
 
-    guessesRemainingDisplay.textContent = guessesRemaining;
+    guessesRemainingDisplay.textContent = "Lives: " + guessesRemaining;
     correctSpaceHoldersDisplay.textContent = correctSpaceHolders.join(" ");
-    lettersGuessedDisplay.textContent = incorrectLetters.join(" ");
+    lettersGuessedDisplay.textContent = "Incorrect Letters: " + incorrectLetters.join(" ");
 
 
 
@@ -83,13 +83,13 @@ function newGame () {
         
         winsDisplay.textContent = "Wins: " + wins;
         
-        newGame ();
+        gameStarter ();
     }
 
     else if (guessesRemaining == 0){
         alert("You lose!");
 
-        newGame ();
+        gameStarter ();
     }
 }
 
