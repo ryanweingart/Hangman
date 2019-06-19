@@ -74,7 +74,7 @@ function newGame () {
         alert("You win!");
         
         winsDisplay.textContent = "Wins: " + wins;
-        
+ 
         gameStarter ();
     }
 
@@ -92,7 +92,25 @@ gameStarter ();
 
 
 
+// function backgroundImage () {
+//     document.body.style.backgroundImage = "url('assets/images/Positano.png')";
+    
+// }
+
+// // Sets the background image
+// const setBackground = (image) => {
+//     document.body.style.background = "url('assets/images/Positano.png')";
+//   };
+//   if (isWeekend) {
+//     setBackground('nature');
+//   } else {
+//     setBackground('pencils');
+//   }
 
 
 
 
+// if (wordSelector.toString() === words[3]) {
+//     backgroundImage ();
+//     document.body.style.backgroundImage = "url('assets/images/Positano.png')";
+// }
