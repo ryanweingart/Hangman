@@ -64,6 +64,18 @@ function guessChecker (letter) {
         }
     }
 
+
+    function backgroundImage () {
+        if (wordSelector.toString() === words[0]) {
+            document.body.style.backgroundImage = "url('assets/images/Hawaii 2.jpg')";
+        }
+        else if (wordSelector.toString() === words[1]) {
+            document.body.style.backgroundImage = "url('assets/images/Singapore.png')";
+        }
+        else if (wordSelector.toString() === words[3]) {
+            document.body.style.backgroundImage = "url('assets/images/Positano.png')";
+        } 
+    }
 function newGame () {
     guessesRemainingDisplay.textContent = "Lives: " + guessesRemaining;
     correctLettersDisplay.textContent = correctLetters.join(" ");
@@ -74,7 +86,8 @@ function newGame () {
         alert("You win!");
         
         winsDisplay.textContent = "Wins: " + wins;
- 
+
+        backgroundImage ();
         gameStarter ();
     }
 
@@ -91,26 +104,3 @@ gameStarter ();
 
 
 
-
-// function backgroundImage () {
-//     document.body.style.backgroundImage = "url('assets/images/Positano.png')";
-    
-// }
-
-// // Sets the background image
-// const setBackground = (image) => {
-//     document.body.style.background = "url('assets/images/Positano.png')";
-//   };
-//   if (isWeekend) {
-//     setBackground('nature');
-//   } else {
-//     setBackground('pencils');
-//   }
-
-
-
-
-// if (wordSelector.toString() === words[3]) {
-//     backgroundImage ();
-//     document.body.style.backgroundImage = "url('assets/images/Positano.png')";
-// }
