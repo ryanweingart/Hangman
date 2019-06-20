@@ -1,3 +1,12 @@
 body {
     background-color: cadetblue;
 }
+
+.jumbotron {
+    text-align: center;
+    
+}
+.col-md-8 {
+    border: solid red;
+    text-align: center;
+}
