@@ -3,8 +3,8 @@ var log = console.log;
 var words = ["hawaii", "singapore", "thailand", "positano"];
 var wordSelector = "";
 var wordLetters = [];
-var spaceHolders = 0;
-var correctSpaceHolders = [];
+var wordLength = 0;
+var correctLetters = [];
 var incorrectLetters = [];
 var guessesRemaining = 6;
 var wins = 0;
@@ -12,7 +12,7 @@ var wins = 0;
 var guessesRemainingDisplay = document.getElementById("guessesRemaining-text");
 var lettersGuessedDisplay = document.getElementById("lettersGuessed-text");
 var winsDisplay = document.getElementById("wins-text");
-var correctSpaceHoldersDisplay = document.getElementById("correctSpaceHolders-text");
+var correctLettersDisplay = document.getElementById("correctLetters-text");
 
 
 document.onkeyup = function(event) {
@@ -24,17 +24,17 @@ document.onkeyup = function(event) {
 function gameStarter () {
     wordSelector = words[Math.floor(Math.random() * words.length)];
     wordLetters = wordSelector.split("");
-    spaceHolders = wordLetters.length;
+    wordLength = wordLetters.length;
 
     guessesRemaining = 6;
     incorrectLetters = [];
-    correctSpaceHolders = [];
+    correctLetters = [];
 
-    for (var blanks = 0; blanks < spaceHolders; blanks++) {
-        correctSpaceHolders.push("_");
+    for (var blanks = 0; blanks < wordLength; blanks++) {
+        correctLetters.push("_");
     }
 
-    correctSpaceHoldersDisplay.textContent = correctSpaceHolders.join(" ");
+    correctLettersDisplay.textContent = correctLetters.join(" ");
     lettersGuessedDisplay.textContent = "Incorrect Letters: " + incorrectLetters.join(" ");
     guessesRemainingDisplay.textContent = "Lives: " + guessesRemaining;
     winsDisplay.textContent = "Wins: " + wins;
@@ -43,7 +43,7 @@ function gameStarter () {
 function guessChecker (letter) {
     var correctLetter = false;
 
-    for (var i = 0; i < spaceHolders; i++) {
+    for (var i = 0; i < wordLength; i++) {
         if (wordSelector[i] === letter) {
             correctLetter = true;
         }
@@ -51,9 +51,9 @@ function guessChecker (letter) {
 
     if (correctLetter) {
 
-        for (var i = 0; i < spaceHolders; i++) {
+        for (var i = 0; i < wordLength; i++) {
             if (wordSelector[i] === letter) {
-                correctSpaceHolders[i] = letter;
+                correctLetters[i] = letter;
             }
         }
     }
@@ -66,10 +66,10 @@ function guessChecker (letter) {
 
 function newGame () {
     guessesRemainingDisplay.textContent = "Lives: " + guessesRemaining;
-    correctSpaceHoldersDisplay.textContent = correctSpaceHolders.join(" ");
+    correctLettersDisplay.textContent = correctLetters.join(" ");
     lettersGuessedDisplay.textContent = "Incorrect Letters: " + incorrectLetters.join(" ");
 
-    if (wordLetters.toString() === correctSpaceHolders.toString()) {
+    if (wordLetters.toString() === correctLetters.toString()) {
         wins++;
         alert("You win!");
         
