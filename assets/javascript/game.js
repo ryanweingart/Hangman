@@ -1,7 +1,6 @@
 //Arrays and variables
 var log = console.log;
-var words = ["amalfi"];
-//  "bologna", "capri", "como", "florence", "milan", "pisa", "pompeii", "portofino", "positano", "ravello", "rome", "sorrento", "tuscany", "venice", "verona"];
+var words = ["amalfi", "bologna", "capri", "como", "florence", "milan", "pisa", "portofino", "positano", "ravello", "rome", "sorrento", "tuscany", "venice", "verona"];
 var wordSelector = "";
 var wordLetters = [];
 var wordLength = 0;
@@ -67,53 +66,50 @@ function guessChecker (letter) {
 
     function backgroundImage () {
         if (wordSelector.toString() === words[0]) {
-            document.getElementById("image").innerHTML = '<img src="assets/images/Amalfi.jpeg">';
+            document.getElementById("image").innerHTML = '<img src="assets/images/Amalfi.jpg">';
         }
-        // else if (wordSelector.toString() === words[1]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Bologna.jpg">';
-        // }
-        // else if (wordSelector.toString() === words[2]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Capri.jpg">';
-        // }
-        // else if (wordSelector.toString() === words[3]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Como.jpg">';
-        // } 
-        // else if (wordSelector.toString() === words[4]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Florence.jpg">';
-        // } 
-        // else if (wordSelector.toString() === words[5]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Milan.jpg">';
-        // } 
-        // else if (wordSelector.toString() === words[6]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Pisa.jpg">';
-        // } 
-        // else if (wordSelector.toString() === words[7]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Pompeii.jpg">';
-        // } 
-        // else if (wordSelector.toString() === words[8]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Portofino.jpg">';
-        // } 
-        // else if (wordSelector.toString() === words[9]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Positano.png">';
-        // } 
-        // else if (wordSelector.toString() === words[10]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Ravello.jpg">';
-        // } 
-        // else if (wordSelector.toString() === words[11]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Rome.jpg">';
-        // } 
-        // else if (wordSelector.toString() === words[12]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Sorrento.jpg">';
-        // } 
-        // else if (wordSelector.toString() === words[13]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Tuscany.jpg">';
-        // } 
-        // else if (wordSelector.toString() === words[14]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Venice.jpg">';
-        // } 
-        // else if (wordSelector.toString() === words[15]) {
-        //     document.getElementById("image").innerHTML = '<img src="assets/images/Verona.jpg">';
-        // } 
+        else if (wordSelector.toString() === words[1]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Bologna.jpg">';
+        }
+        else if (wordSelector.toString() === words[2]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Capri.jpg">';
+        }
+        else if (wordSelector.toString() === words[3]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Como.jpg">';
+        } 
+        else if (wordSelector.toString() === words[4]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Florence.jpg">';
+        } 
+        else if (wordSelector.toString() === words[5]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Milan.jpg">';
+        } 
+        else if (wordSelector.toString() === words[6]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Pisa.jpg">';
+        } 
+        else if (wordSelector.toString() === words[7]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Portofino.jpg">';
+        } 
+        else if (wordSelector.toString() === words[8]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Positano.jpg">';
+        } 
+        else if (wordSelector.toString() === words[9]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Ravello.jpg">';
+        } 
+        else if (wordSelector.toString() === words[10]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Rome.jpg">';
+        } 
+        else if (wordSelector.toString() === words[11]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Sorrento.jpg">';
+        } 
+        else if (wordSelector.toString() === words[12]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Tuscany.jpeg">';
+        } 
+        else if (wordSelector.toString() === words[13]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Venice.jpg">';
+        } 
+        else if (wordSelector.toString() === words[14]) {
+            document.getElementById("image").innerHTML = '<img src="assets/images/Verona.png">';
+        } 
     }
 
     function newGame () {
