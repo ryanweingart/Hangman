@@ -9,4 +9,5 @@ body {
 .col-md-8 {
     border: solid red;
     text-align: center;
+    background-color: white;
 }

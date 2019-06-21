@@ -1,6 +1,6 @@
 //Arrays and variables
 var log = console.log;
-var words = ["hawaii", "singapore", "thailand", "positano"];
+var words = ["amalfi", "bologna", "capri", "como", "florence", "milan", "pisa", "pompeii", "portofino", "positano", "ravello", "rome", "sorrento", "tuscany", "venice", "verona"];
 var wordSelector = "";
 var wordLetters = [];
 var wordLength = 0;
@@ -67,35 +67,75 @@ function guessChecker (letter) {
 
     function backgroundImage () {
         if (wordSelector.toString() === words[0]) {
-            document.body.style.backgroundImage = "url('assets/images/Hawaii 2.jpg')";
+            document.body.style.backgroundImage = "url('assets/images/Amalfi.jpeg')";
         }
         else if (wordSelector.toString() === words[1]) {
-            document.body.style.backgroundImage = "url('assets/images/Singapore.png')";
+            document.body.style.backgroundImage = "url('assets/images/Bologna.jpg')";
+        }
+        else if (wordSelector.toString() === words[2]) {
+            document.body.style.backgroundImage = "url('assets/images/Capri.jpg')";
         }
         else if (wordSelector.toString() === words[3]) {
+            document.body.style.backgroundImage = "url('assets/images/Como.jpg')";
+        } 
+        else if (wordSelector.toString() === words[4]) {
+            document.body.style.backgroundImage = "url('assets/images/Florence.jpg')";
+        } 
+        else if (wordSelector.toString() === words[5]) {
+            document.body.style.backgroundImage = "url('assets/images/Milan.jpg')";
+        } 
+        else if (wordSelector.toString() === words[6]) {
+            document.body.style.backgroundImage = "url('assets/images/Pisa.jpg')";
+        } 
+        else if (wordSelector.toString() === words[7]) {
+            document.body.style.backgroundImage = "url('assets/images/Pompeii.jpg')";
+        } 
+        else if (wordSelector.toString() === words[8]) {
+            document.body.style.backgroundImage = "url('assets/images/Portofino.jpg')";
+        } 
+        else if (wordSelector.toString() === words[9]) {
             document.body.style.backgroundImage = "url('assets/images/Positano.png')";
         } 
+        else if (wordSelector.toString() === words[10]) {
+            document.body.style.backgroundImage = "url('assets/images/Ravello.jpg')";
+        } 
+        else if (wordSelector.toString() === words[11]) {
+            document.body.style.backgroundImage = "url('assets/images/Rome.jpg')";
+        } 
+        else if (wordSelector.toString() === words[12]) {
+            document.body.style.backgroundImage = "url('assets/images/Sorrento.jpg')";
+        } 
+        else if (wordSelector.toString() === words[13]) {
+            document.body.style.backgroundImage = "url('assets/images/Tuscany.jpg')";
+        } 
+        else if (wordSelector.toString() === words[14]) {
+            document.body.style.backgroundImage = "url('assets/images/Venice.jpg')";
+        } 
+        else if (wordSelector.toString() === words[15]) {
+            document.body.style.backgroundImage = "url('assets/images/Verona.jpg')";
+        } 
     }
-function newGame () {
-    guessesRemainingDisplay.textContent = "Lives: " + guessesRemaining;
-    correctLettersDisplay.textContent = correctLetters.join(" ");
-    lettersGuessedDisplay.textContent = "Incorrect Letters: " + incorrectLetters.join(" ");
 
-    if (wordLetters.toString() === correctLetters.toString()) {
-        wins++;
-        alert("You win!");
-        
-        winsDisplay.textContent = "Wins: " + wins;
+    function newGame () {
+        guessesRemainingDisplay.textContent = "Lives: " + guessesRemaining;
+        correctLettersDisplay.textContent = correctLetters.join(" ");
+        lettersGuessedDisplay.textContent = "Incorrect Letters: " + incorrectLetters.join(" ");
 
-        backgroundImage ();
-        gameStarter ();
-    }
+        if (wordLetters.toString() === correctLetters.toString()) {
+            wins++;
+            alert("You win!");
+            
+            winsDisplay.textContent = "Wins: " + wins;
 
-    else if (guessesRemaining === 0) {
-        alert("You lose!");
+            backgroundImage ();
+            gameStarter ();
+        }
 
-        gameStarter ();
-    }
+        else if (guessesRemaining === 0) {
+            alert("You lose!");
+
+            gameStarter ();
+        }
 }
 
 gameStarter ();
