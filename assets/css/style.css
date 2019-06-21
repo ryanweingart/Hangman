@@ -6,8 +6,19 @@ body {
     text-align: center;
 
 }
-.col-md-8 {
+.col-md-5 {
     border: solid red;
     text-align: center;
     background-color: white;
+    height: 600px;
+    overflow: hidden;
+}
+
+.col-md-12 {
+    background-color: blue;
+    border: solid gray;
+}
+
+#image {
+    height: 300px;
 }
