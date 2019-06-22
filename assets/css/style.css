@@ -1,20 +1,20 @@
-body {
-    background-color: cadetblue;
-}
+
 
 .jumbotron {
     text-align: center;
 
 }
 .col-md-8 {
-    border: solid red;
-    text-align: center;
     height: 600px;
     overflow: hidden;
 }
 
 .col-md-12 {
-    background-color: white;
-    border: solid gray;
+    border-bottom: solid slateblue;
+    text-align: center;
+    color: cadetblue;
+    height: 60px;
+    font-size: 24px;
+    padding-top: 15px;
 }
 

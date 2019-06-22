@@ -6,7 +6,7 @@ var wordLetters = [];
 var wordLength = 0;
 var correctLetters = [];
 var incorrectLetters = [];
-var guessesRemaining = 6;
+var guessesRemaining = 9;
 var wins = 0;
 
 var guessesRemainingDisplay = document.getElementById("guessesRemaining-text");
@@ -25,7 +25,7 @@ function gameStarter () {
     wordLetters = wordSelector.split("");
     wordLength = wordLetters.length;
 
-    guessesRemaining = 6;
+    guessesRemaining = 9;
     incorrectLetters = [];
     correctLetters = [];
 
@@ -64,7 +64,7 @@ function guessChecker (letter) {
     }
 
 
-    function backgroundImage () {
+    function italyImage () {
         if (wordSelector.toString() === words[0]) {
             document.getElementById("image").innerHTML = '<img src="assets/images/Amalfi.jpg">';
         }
@@ -123,7 +123,7 @@ function guessChecker (letter) {
             
             winsDisplay.textContent = "Wins: " + wins;
 
-            backgroundImage ();
+            italyImage ();
             gameStarter ();
         }
 
