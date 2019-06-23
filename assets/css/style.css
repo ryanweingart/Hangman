@@ -2,6 +2,7 @@
 
 .jumbotron {
     text-align: center;
+    background-color: slategray;
 
 }
 .col-md-8 {
@@ -10,7 +11,7 @@
 }
 
 .col-md-12 {
-    border-bottom: solid slateblue;
+    border-bottom: solid slategray;
     text-align: center;
     color: cadetblue;
     height: 60px;
@@ -19,13 +20,18 @@
 }
 
 h1 {
-    color: cadetblue;
+    color: white;
+    text-shadow: 
+    -1px -1px 0 cadetblue,
+    1px -1px 0 cadetblue,
+    -1px 1px 0 cadetblue,
+     1px 1px 0 cadetblue;
 }
 
 .lead {
-    color: slateblue;
+    color: white;
 }
 
-hr {
-    color: cadetblue;
+.my-4 {
+    background-color: white;
 }
