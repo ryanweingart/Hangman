@@ -21,6 +21,8 @@ document.onkeyup = function(event) {
 }
 
 function gameStarter () {
+//     var wordSelect = Math.floor(Math.random()*words.length);
+// var pickRandomWord = words[wordSelect];
     wordSelector = words[Math.floor(Math.random() * words.length)];
     wordLetters = wordSelector.split("");
     wordLength = wordLetters.length;

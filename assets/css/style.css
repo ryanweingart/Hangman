@@ -18,3 +18,14 @@
     padding-top: 15px;
 }
 
+h1 {
+    color: cadetblue;
+}
+
+.lead {
+    color: slateblue;
+}
+
+hr {
+    color: cadetblue;
+}
